@@ -1,0 +1,25 @@
+{
+  "name": "facebook-noise-filter",
+  "version": "0.0.1",
+  "description": "A Facebook content filter desktop app. Filters the Facebook feed list given a set of keywords of your interest",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lexmartinez/facebook-noise-filter.git"
+  },
+  "keywords": [
+    "web-scraping",
+    "electron",
+    "facebook",
+    "content-filter"
+  ],
+  "author": "Lex Martinez <lex0316@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lexmartinez/facebook-noise-filter/issues"
+  },
+  "homepage": "https://github.com/lexmartinez/facebook-noise-filter#readme"
+}
