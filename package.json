@@ -3,8 +3,12 @@
   "version": "0.0.1",
   "description": "A Facebook content filter desktop app. Filters the Facebook feed list given a set of keywords of your interest",
   "main": "index.js",
+  "productName": "Facebook Noise Filter",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "electron ./",
+    "build:mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=icons/app.icns --prune=true --out=release-builds",
+    "build:win": "electron-packager . facebook-noise-filter --overwrite --asar=true --platform=win32 --arch=ia32 --icon=icons/app.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Facebook Noise Filter\"",
+    "build:linux": "electron-packager . facebook-noise-filter --overwrite --asar=true --platform=linux --arch=x64 --icon=icons/app.png --prune=true --out=release-builds"
   },
   "repository": {
     "type": "git",
@@ -13,13 +17,19 @@
   "keywords": [
     "web-scraping",
     "electron",
-    "facebook",
-    "content-filter"
+    "nodejs",
+    "content-filtering"
   ],
   "author": "Lex Martinez <lex0316@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/lexmartinez/facebook-noise-filter/issues"
   },
-  "homepage": "https://github.com/lexmartinez/facebook-noise-filter#readme"
+  "homepage": "https://github.com/lexmartinez/facebook-noise-filter#readme",
+  "dependencies": {
+    "electron": "^1.7.10"
+  },
+  "devDependencies": {
+    "electron-packager": "^10.1.0"
+  }
 }

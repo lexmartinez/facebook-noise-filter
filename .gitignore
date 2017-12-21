@@ -22,4 +22,5 @@ dist/
 .idea
 *.iws
 
+/release-builds
 .DS_Store

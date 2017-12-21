@@ -34,6 +34,10 @@ $ npm start
 ## Production
 
     ....
+    
+## Contribute
+
+Feel completely free of contribute to this project, just contact me and we can improve this app together
 
 ## License
 
