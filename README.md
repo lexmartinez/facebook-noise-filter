@@ -1,6 +1,6 @@
-# facebook-noise-filter
+# :fishing_pole_and_fish: Facebook Noise Filter
 
-:fishing_pole_and_fish: A Facebook content filter desktop app. Filters the Facebook feed list given a set of keywords of your interest
+A Facebook content filter desktop app. Filters the Facebook feed list given a set of keywords of your interest
 
 ### Quick start
 
@@ -18,16 +18,8 @@ $ npm install
 $ npm start
 ```
 
-# Table of Contents
-
-* [How it Works](#how)
-* [Dependencies](#dependencies)
-* [Developing](#developing)
-* [Production](#production)
-* [License](#license)
-
  ## Introduction
- Stay away of non interest content on your Facebook feed!, `facebook-noise-filter` scrape your Facebook feed and filter all post of your interest given a set of keywords 
+ Stay away of non interest content on your Facebook feed!, `facebook-noise-filter` scrape your Facebook feed and filter all post of your interest given a set of keywords. 
     
  ## Dependencies
  
