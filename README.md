@@ -33,8 +33,22 @@ $ npm start
     
 ## Production
 
-    ....
-    
+Using the `electron-packager` setup, we can use the following commands to build our application according the O.S
+
+```bash
+# macOS Build
+$ npm run build:mac
+
+# Linux Build
+$ npm run build:linux
+
+# Windows Build
+$ npm run build:win
+
+```
+
+You can now go to `/release-builds` and enjoy your application!
+
 ## Contribute
 
 Feel completely free of contribute to this project, just contact me and we can improve this app together
