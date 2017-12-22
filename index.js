@@ -3,11 +3,43 @@ const app = electron.app
 const Menu = electron.Menu
 const BrowserWindow = electron.BrowserWindow
 const server = require('./app/server')
-const openAboutWindow = require('about-window').default;
+const openAboutWindow = require('about-window').default
 const join = require('path').join;
+const prompt = require('electron-prompt')
+const _ = require('lodash')
+const datastore = require('nedb')
 
 let screen
 let core
+
+const keywords = () => {
+
+ const db = new datastore({ filename: join(__dirname, '/data.db'), autoload: true })
+
+ db.findOne({}, (err, doc) => {
+  if (!doc) {
+   db.insert({keywords:[]}, (err, newDocs) => {})
+  }
+  const keywords = (doc) ? doc.keywords : []
+  prompt({
+   title: 'Filter Keywords',
+   label: 'Keywords:',
+   value: _.join(keywords, ','),
+   inputAttrs: {
+    type: 'url'
+   },
+   type: 'input'
+  })
+   .then((r) => {
+    if(r){
+     const values = _.split(r, ',')
+     db.update({}, {$set: { keywords: values }}, {}, () => { });
+    }
+   })
+   .catch(console.error);
+ })
+
+}
 
 const renderMenu = () => {
  const menu = Menu.buildFromTemplate([
@@ -29,9 +61,7 @@ const renderMenu = () => {
      },
      {
        label: 'Keywords...',
-       click: () => {
-
-       },
+       click: keywords,
        accelerator: 'CommandOrControl+.'
      },{
        type:'separator'

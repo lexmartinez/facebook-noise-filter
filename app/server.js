@@ -5,10 +5,18 @@ const app = express()
 const scraper = require('./scraper')
 const bodyParser = require('body-parser')
 const join = require('path').join;
+const datastore = require('nedb')
+const db = new datastore({ filename: join(__dirname, '../data.db'), autoload: true })
 
 const handleScraping = (req, res) => {
- scraper(req.query.username, req.query.password, ['practical dev', 'cultura', 'dev', 'framework', 'program']).then((posts) => {
-  res.render('feed', { posts, username:req.query.username, password:req.query.password})
+ db.findOne({}, (err, doc) => {
+  const keywords = (doc) ? doc.keywords : []
+  scraper(req.query.username, req.query.password, keywords).then((posts) => {
+   res.render('feed', { posts, username:req.query.username, password:req.query.password})
+  })
+  if (!doc) {
+   db.insert({keywords:[]}, (err, newDocs) => {});
+  }
  })
 }
 
