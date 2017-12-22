@@ -27,11 +27,8 @@ $ npm start
  * `node` and `npm` (Use [NVM](https://github.com/creationix/nvm))
  * Ensure you're running Node (`v7.x.x`+) and NPM (`4.x.x`+)
  
- ## Developing
- 
-    ....
-    
-## Production
+
+## Packaging
 
 Using the `electron-packager` setup, we can use the following commands to build our application according the O.S
 
@@ -48,6 +45,12 @@ $ npm run build:win
 ```
 
 You can now go to `/release-builds` and enjoy your application!
+
+## Screenshots
+
+![](https://github.com/lexmartinez/facebook-noise-filter/raw/master/screenshots/screenshot-1.png)
+
+![](https://github.com/lexmartinez/facebook-noise-filter/raw/master/screenshots/screenshot-2.png)
 
 ## Contribute
 

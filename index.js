@@ -1,7 +1,6 @@
 const electron = require('electron')
 const app = electron.app
 const Menu = electron.Menu
-const globalShortcut = electron.globalShortcut
 const BrowserWindow = electron.BrowserWindow
 const server = require('./app/server')
 const openAboutWindow = require('about-window').default;
@@ -30,7 +29,9 @@ const renderMenu = () => {
      },
      {
        label: 'Keywords...',
-       click: () => {console.log('holiii')},
+       click: () => {
+
+       },
        accelerator: 'CommandOrControl+.'
      },{
        type:'separator'
