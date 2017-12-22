@@ -18,7 +18,7 @@ const renderMenu = () => {
         label: 'About This App',
         click: () => openAboutWindow({
          icon_path: join(__dirname, '/icons/app.png'),
-         copyright: 'Copyright (c) 2017 lexmartinez',
+         copyright: 'Copyright (c) 2017 Lex Martinez',
          open_devtools: false,
          description: 'A Facebook content filter desktop app',
          win_options : {resizable: false, maximizable: false}
