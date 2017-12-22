@@ -1,5 +1,6 @@
 <html> <head> <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css"> <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script> <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script> <link rel="stylesheet" href="/draggable.css"/> <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> </head><body><footer class="page-footer white" style="height: 100%"><div class="container" style="margin-top:40px">
                 if posts.length > 0
+                    <div class="row" style="position: fixed; top:20px; right: 40px"><a class="blue-text darken-3-text" style="cursor:pointer" href="feed?username=#{username}&password=#{password}"><i class="fa fa-refresh"></i> REFRESH FEED</a></div>
                     <div class="row">
                         each item in posts
                             <div class="col s4 m4">

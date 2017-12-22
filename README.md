@@ -50,7 +50,7 @@ You can now go to `/release-builds` and enjoy your application!
 
 ![](https://github.com/lexmartinez/facebook-noise-filter/raw/master/screenshots/screenshot-1.png)
 
-![](https://github.com/lexmartinez/facebook-noise-filter/raw/master/screenshots/screenshot-2.png)
+![](https://github.com/lexmartinez/facebook-noise-filter/raw/master/screenshots/screenshot-feed.png)
 
 ## Contribute
 
