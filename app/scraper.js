@@ -14,7 +14,7 @@ async function filter (user, password, keywords) {
  await page.click('#loginbutton')
  await page.waitForNavigation({waitUntil:'domcontentloaded'})
 
- for (let i=0; i < 5000; i++){
+ for (let i=0; i < 10000; i++){
   await page.keyboard.press('ArrowDown')
  }
 
@@ -31,7 +31,7 @@ async function filter (user, password, keywords) {
  });
 
  let results = _.filter(posts,(o) => {
-  return (new RegExp(keywords.join("|")).test(o.text))
+  return (new RegExp(keywords.join('|')).test(o.text))
  })
 
  browser.close()
