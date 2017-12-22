@@ -1,12 +1,20 @@
-const electron = require('electron');
-const app = electron.app;
-const BrowserWindow = electron.BrowserWindow;
+const electron = require('electron')
+const app = electron.app
+const BrowserWindow = electron.BrowserWindow
 
-let screen;
+let screen
 
 const renderApp = () => {
- screen = new BrowserWindow()
- screen.loadURL('https://lexmartinez.com')
+ screen = new BrowserWindow({
+   titleBarStyle: 'hidden',
+   width: 900,
+   height: 600,
+   maximizable: false,
+   resizable:false
+ })
+
+ screen.loadURL('http://localhost:8888')
+
  screen.on('closed', () => {
    screen = null
  })
@@ -15,7 +23,6 @@ const renderApp = () => {
 app.on('ready', renderApp);
 
 app.on('window-all-closed', () => {
- // only quit the application on OS X if the user hits cmd + q
  if (process.platform !== 'darwin') {
   app.quit()
  }
