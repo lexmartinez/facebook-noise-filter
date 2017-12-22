@@ -18,7 +18,8 @@
     "web-scraping",
     "electron",
     "nodejs",
-    "content-filtering"
+    "content-filtering",
+    "pug"
   ],
   "author": "Lex Martinez <lex0316@gmail.com>",
   "license": "MIT",
