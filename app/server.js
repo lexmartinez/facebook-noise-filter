@@ -7,7 +7,7 @@ const bodyParser = require('body-parser')
 const join = require('path').join;
 
 const handleScraping = (req, res) => {
- scraper(req.query.username, req.query.password, ['practical dev', 'cultura colectiva']).then((posts) => {
+ scraper(req.query.username, req.query.password, ['practical dev', 'cultura colectiva', 'a']).then((posts) => {
   res.render('feed', { posts, username:req.query.username, password:req.query.password})
  })
 }
