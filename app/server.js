@@ -39,22 +39,22 @@ module.exports = () => {
  });
 
  app.get('/draggable.css', (req, res) => {
-  res.send('body { ' +
-   '        -ms-overflow-style: scrollbar; ' +
-   '        -webkit-app-region:drag; ' +
-   '      } ' +
-   '      input[type="submit"], ' +
-   '      input[type="reset"], ' +
-   '      input[type="button"], ' +
-   '      input[type="text"], ' +
-   '      button, .card, ' +
-   '      textarea { ' +
-   '        -webkit-app-region: no-drag; ' +
-   '      } ' +
-   '     .input-field input[type=text]:focus { ' +
-   '        border-bottom: 1px solid #000; ' +
-   '        box-shadow: 0 1px 0 0 #000;' +
-   '     }')
+  res.send(`body {
+      -ms-overflow-style: scrollbar;
+      -webkit-app-region:drag;
+    }
+    input[type="submit"],
+    input[type="reset"],
+    input[type="button"],
+    input[type="text"],
+    button, .card,
+    textarea {
+      -webkit-app-region: no-drag;
+    }
+   .input-field input[type=text]:focus {
+      border-bottom: 1px solid #000;
+      box-shadow: 0 1px 0 0 #000
+   }`)
  });
 
  return app.listen(8888);
